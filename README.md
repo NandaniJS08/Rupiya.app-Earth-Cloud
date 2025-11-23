@@ -74,7 +74,7 @@ This project is a highly interactive, performant front-end website.
 
 The deployed, live version of Rupiya.app can be accessed here:
 
-[**Access Rupiya.app Live Site**](YOUR_LIVE_DEMO_URL)
+[**Access Rupiya.app Live Site**](https://nandanijs08.github.io/Rupiya.app-Earth-Cloud/)
 
 ---
 
