@@ -1,0 +1,2053 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title data-i18n="pageTitle">Rupiya.app — Earth → Cloud (Pro Enhanced)</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Rupiya<span style="color:var(--leaf)">.app</span></div>
+
+        <!-- Hamburger (Mobile) -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Open Menu">
+            <i data-lucide="menu"></i>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+            <div class="nav-links" id="nav-links-container">
+                <!-- Farmer Links -->
+                <a href="#home" class="nav-link-role" data-role="farmer" data-i18n="navHome">Home</a>
+                <a href="#residue" class="nav-link-role" data-role="farmer" data-i18n="navResidue">Residue-Free</a>
+                <a href="#tasks-section" class="nav-link-role" data-role="farmer" data-i18n="navTasks">Task Manager</a>
+                <a href="#journey" class="nav-link-role" data-role="farmer" data-i18n="navJourney">Farmer Journey</a>
+                <a href="#carbon" class="nav-link-role" data-role="farmer" data-i18n="navCarbon">Carbon Credits</a>
+                <a href="#finance" class="nav-link-role" data-role="farmer" data-i18n="navFinance">Finance</a>
+
+                <!-- FPO Links -->
+                <a href="#home" class="nav-link-role" data-role="fpo" data-i18n="navHome">Home</a>
+                <a href="#fpo-dashboard" class="nav-link-role" data-role="fpo" data-i18n="navFPODashboard">FPO
+                    Dashboard</a>
+                <a href="#fpo-members" class="nav-link-role" data-role="fpo" data-i18n="navFPOMembers">Member
+                    Management</a>
+                <a href="#fpo-procurement" class="nav-link-role" data-role="fpo" data-i18n="navFPOProcurement">Bulk
+                    Procurement</a>
+                <a href="#carbon" class="nav-link-role" data-role="fpo" data-i18n="navCarbon">Group Carbon Credits</a>
+
+                <!-- Buyer Links -->
+                <a href="#home" class="nav-link-role" data-role="buyer" data-i18n="navHome">Home</a>
+                <a href="#buyer-catalog" class="nav-link-role" data-role="buyer" data-i18n="navBuyerCatalog">Product
+                    Catalog</a>
+                <a href="#buyer-traceability" class="nav-link-role" data-role="buyer"
+                    data-i18n="navBuyerTraceability">Traceability</a>
+                <a href="#buyer-procurement" class="nav-link-role" data-role="buyer"
+                    data-i18n="navBuyerProcurement">Procurement</a>
+                <a href="#buyer-certifications" class="nav-link-role" data-role="buyer"
+                    data-i18n="navBuyerCertifications">Certifications</a>
+
+                <!-- Investor Links -->
+                <a href="#home" class="nav-link-role" data-role="investor" data-i18n="navHome">Home</a>
+                <a href="#investor-dashboard" class="nav-link-role" data-role="investor"
+                    data-i18n="navInvestorDashboard">Impact Dashboard</a>
+                <a href="#investor-metrics" class="nav-link-role" data-role="investor"
+                    data-i18n="navInvestorMetrics">ROI Metrics</a>
+                <a href="#investor-portfolio" class="nav-link-role" data-role="investor"
+                    data-i18n="navInvestorPortfolio">Portfolio</a>
+                <a href="#investor-opportunities" class="nav-link-role" data-role="investor"
+                    data-i18n="navInvestorOpportunities">Opportunities</a>
+
+            </div>
+
+            <div class="controls ">
+                <div class="role-dropdown" id="role-dropdown">
+                    <button class="role-dropdown-btn" id="role-dropdown-btn">
+                        <span data-i18n="pillFarmer">Farmers</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" id="dropdown-menu">
+                        <a class="dropdown-item active" data-audience="farmer" data-i18n="pillFarmer">Farmers</a>
+                        <a class="dropdown-item" data-audience="fpo" data-i18n="pillFPO">FPOs</a>
+                        <a class="dropdown-item" data-audience="buyer" data-i18n="pillBuyer">Buyers</a>
+                        <a class="dropdown-item" data-audience="investor" data-i18n="pillInvestor">Investors</a>
+                    </div>
+                </div>
+
+                <div class="lang-switch" aria-hidden="false">
+                    <button id="lang-en" class="active">EN</button>
+                    <button id="lang-hi">हिंदी</button>
+                    <button id="lang-gu">ગુજરાતી</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero" aria-labelledby="hero-title" id="home">
+            <div class="hero-left">
+                <h1 id="hero-title" data-i18n-html="heroTitle">
+                    <span class="accent">Where soil</span> meets <span class="accent">satellite</span> —
+                    turn better farming into real income
+                </h1>
+
+                <p id="hero-sub"></p>
+
+                <div class="ctas" style="margin-top:18px;">
+                    <button class="btn primary-cta" id="joinBtn"></button>
+                   <a class="btn primary-cta" id="learnBtn" data-i18n="learnCredits" href="#carbon" style="text-decoration: none;">
+    How Carbon Credits Work
+</a>
+                </div>
+
+                <div class="stats" style="margin-top:25px">
+                    <div class="stat reveal-item">
+                        <div class="num" id="stat-farmers">50K+</div>
+                        <div style="font-size:13px" data-i18n="statFarmers">Farmers (target)</div>
+                    </div>
+                    <div class="stat reveal-item">
+                        <div class="num" id="stat-hectares">5L+</div>
+                        <div style="font-size:13px" data-i18n="statHectares">Hectares (target)</div>
+                    </div>
+                    <div class="stat reveal-item">
+                        <div class="num" id="stat-credit">₹800</div>
+                        <div style="font-size:13px" data-i18n="statCredit">/verified credit</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right" aria-hidden="true">
+                <!-- use proper path/optimized image; lazy load for perf -->
+                <img src="images/fam2.jpg" alt="Group of farmers in a field" loading="lazy" width="720" height="480">
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Residue-Free Farming section-------------------- -->
+        <section id="residue" class="section-wrap" data-role="farmer" aria-labelledby="res-title">
+            <div class="section-title">
+                <h2 id="res-title" data-i18n="resTitle">Residue-Free Farming <i data-lucide="leaf"
+                        style="color:var(--leaf);margin-top:4px"></i> — how it works</h2>
+            </div>
+            <p class="section-sub" data-i18n="resSubNew">
+                The path to higher income: Satellite Testing → AI Advisory → Guaranteed Buy-Back & Carbon Income.
+            </p>
+            <div style="display:flex;gap:24px;flex-wrap:wrap;margin-top:25px">
+
+                <div class="svg-box card" style="flex:1 1 540px;">
+
+                    <h3 style="margin-top:0;color:var(--earth-green)" data-i18n="resDiagramTitle">Earth → Cloud → Proof
+                    </h3>
+                    <p class="section-sub" style="margin-top: 10px; margin-bottom: 15px;" data-i18n="resDiagramDesc">
+                        We provide the complete stack: remote soil analytics, real-time AI guidance, on-ground expert
+                        support, and a guaranteed market to buy your residue-free produce, plus extra income from carbon
+                        credits.
+                    </p>
+
+                    <img src="images/img.png"
+                        alt="Residue-free farming flow: Satellite soil testing → AI monitoring → Buy-back & carbon income"
+                        style="width: 100%; 
+            aspect-ratio: 1.5 / 1; 
+            border-radius: 8px; 
+            margin-top: 10px;
+            object-fit: contain;">
+
+                    <div class="card" style="padding:18px;margin-top:20px;">
+                        <h3 style="color:var(--earth-green);margin-bottom:14px;" data-i18n="resStepsTitle">3 Simple
+                            Steps</h3>
+
+                        <div style="margin-bottom:14px;">
+                            <i data-lucide="satellite" style="color:var(--earth-green); margin-right: 8px;"></i>
+                            <strong data-i18n="resStep1Title">1. Satellite Soil Testing</strong>
+                            <p style="font-size:14px;opacity:0.8;margin-top:4px; margin-left: 24px;"
+                                data-i18n="resStep1Desc">
+                                Remote soil analysis to understand nutrients, moisture and organic carbon.
+                            </p>
+                        </div>
+
+                        <div style="margin-bottom:14px;">
+                            <i data-lucide="monitor-check" style="color:var(--earth-green); margin-right: 8px;"></i>
+                            <strong data-i18n="resStep2Title">2. AI Monitoring + Advisory</strong>
+                            <p style="font-size:14px;opacity:0.8;margin-top:4px; margin-left: 24px;"
+                                data-i18n="resStep2Desc">
+                                Daily crop health alerts and guidance from on-field agronomists.
+                            </p>
+                        </div>
+
+                        <div>
+                            <i data-lucide="wallet" style="color:var(--earth-green); margin-right: 8px;"></i>
+                            <strong data-i18n="resStep3Title">3. Buy-Back + Carbon Income</strong>
+                            <p style="font-size:14px;opacity:0.8;margin-top:4px; margin-left: 24px;"
+                                data-i18n="resStep3Desc">
+                                Guaranteed farm-gate procurement and additional income from verified carbon credits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="flex:0 0 360px; display: flex; flex-direction: column;">
+
+                    <h3 data-i18n="fullProcessTitle" class="reveal-item">What We Provide (Full Stack)</h3>
+
+                    <ul
+                        style="list-style-type: none; padding-left: 0; margin: 20px 0; font-size: 15px; color: var(--cloud-navy); margin-bottom: auto;">
+
+                        <li style="margin-bottom: 20px;">
+                            <i data-lucide="chevrons-right" class="icon-tiny"
+                                style="color:var(--earth-green); margin-right: 8px; float: left;"></i>
+                            <div style="padding-left: 20px;">
+                                <strong style="color:var(--earth-green);" data-i18n="resInputTitle">35 residue-free
+                                    agriculture inputs</strong>
+                                <div style="font-size:14px;color:var(--text);opacity:0.8; margin-top: 4px;"
+                                    data-i18n="resInputDesc">
+                                    Access to approved bio-stimulants, bio-pesticides, and natural nutrients for safe
+                                    farming.
+                                </div>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </li>
+
+                        <li style="margin-bottom: 20px;">
+                            <i data-lucide="shield-check" class="icon-tiny"
+                                style="color:var(--earth-green); margin-right: 8px; float: left;"></i>
+                            <div style="padding-left: 20px;">
+                                <strong style="color:var(--earth-green);" data-i18n="resInsuranceTitle">Parametric
+                                    insurance</strong>
+                                <div style="font-size:14px;color:var(--text);opacity:0.8; margin-top: 4px;"
+                                    data-i18n="resInsuranceDesc">
+                                    Automated, fast payout for losses due to defined weather events (rain, humidity,
+                                    temperature, wildlife).
+                                </div>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </li>
+
+                        <li style="margin-bottom: 20px;">
+                            <i data-lucide="sun" class="icon-tiny"
+                                style="color:var(--earth-green); margin-right: 8px; float: left;"></i>
+                            <div style="padding-left: 20px;">
+                                <strong style="color:var(--earth-green);" data-i18n="resCarbonTitle">Soil organic carbon
+                                    tracking</strong>
+                                <div style="font-size:14px;color:var(--text);opacity:0.8; margin-top: 4px;"
+                                    data-i18n="resCarbonDesc">
+                                    Continuous monitoring of soil health and carbon sequestration for official
+                                    verification and credit generation.
+                                </div>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </li>
+
+                        <li style="margin-bottom: 20px;">
+                            <i data-lucide="credit-card" class="icon-tiny"
+                                style="color:var(--earth-green); margin-right: 8px; float: left;"></i>
+                            <div style="padding-left: 20px;">
+                                <strong style="color:var(--earth-green);" data-i18n="resCreditTitle">Farm credit
+                                    support</strong>
+                                <div style="font-size:14px;color:var(--text);opacity:0.8; margin-top: 4px;"
+                                    data-i18n="resCreditDesc">
+                                    Facilitation of low-interest loans and financial services based on digital farm
+                                    records and projected income.
+                                </div>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </li>
+
+                        <li style="margin-bottom: 20px;">
+                            <i data-lucide="handshake" class="icon-tiny"
+                                style="color:var(--earth-green); margin-right: 8px; float: left;"></i>
+                            <div style="padding-left: 20px;">
+                                <strong style="color:var(--earth-green);" data-i18n="resProcurementTitle">Direct
+                                    Procurement (Buy-Back
+                                    Guarantee)</strong>
+                                <div style="font-size:14px;color:var(--text);opacity:0.8; margin-top: 4px;"
+                                    data-i18n="resProcurementDesc">
+                                    Guaranteed market linkage for your residue-free produce at competitive, transparent
+                                    farm-gate prices.
+                                </div>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </li>
+
+                        <li style="margin-bottom: 0;">
+                            <i data-lucide="book-open" class="icon-tiny"
+                                style="color:var(--earth-green); margin-right: 8px; float: left;"></i>
+                            <div style="padding-left: 20px;">
+                                <strong style="color:var(--earth-green);" data-i18n="resTrainingTitle">Training +
+                                    digital record keeping</strong>
+                                <div style="font-size:14px;color:var(--text);opacity:0.8; margin-top: 4px;"
+                                    data-i18n="resTrainingDesc">
+                                    On-ground workshops and a simple mobile app for recording all farming activities and
+                                    compliance.
+                                </div>
+                            </div>
+                            <div style="clear: both;"></div>
+                        </li>
+
+                    </ul>
+
+                    <button class="btn primary-cta" style="margin-top:20px;width:100%" data-i18n="joinBtn2">Join the
+                        Movement</button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+        <section class="section-wrap" class="tasks" id="tasks-section" data-role="farmer">
+            <div class="section-title">
+                <h2 data-i18n="tasksTitle">Farm Task Manager</h2>
+            </div>
+
+            <div class="task-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+
+                <div class="card" style="min-height: 400px;">
+                    <h3 style="color: var(--earth-green); display: flex; align-items: center; gap: 10px;">
+                        <i data-lucide="list-todo"></i> <span data-i18n="upcomingTasks">Upcoming Tasks</span>
+                    </h3>
+                    <div id="taskList" class="task-list" style="margin-top: 20px;">
+                    </div>
+                </div>
+
+                <div class="card"
+                    style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <div style="position: relative; width: 150px; height: 150px; margin-bottom: 20px;">
+                        <div id="progressAnimation" class="progress-circle">
+                            <div
+                                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: 800; font-size: 1.5rem; color: var(--cloud-navy);">
+                                <span id="progressPercent">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 data-i18n="complianceScore">Compliance Score</h3>
+                    <p style="margin-bottom: 25px;" data-i18n="improveScoreHint">Complete tasks to improve your score.</p>
+
+                    <button id="logActionBtn" class="btn primary-cta" style="width: 100%; max-width: 250px;">
+                        <i data-lucide="plus-circle" style="margin-right: 8px;"></i> <span data-i18n="btnLogAction">Log New Action</span>
+                    </button>
+                </div>
+            </div>
+            
+        </section>
+
+        <div id="logActionModal" style="
+    display: none; 
+    position: fixed; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.8); 
+    z-index: 999999; 
+    justify-content: center; 
+    align-items: center;">
+
+            <div style="
+        background: white; 
+        padding: 30px; 
+        width: 90%; 
+        max-width: 450px; 
+        border-radius: 12px; 
+        position: relative;
+        max-height: 90vh; 
+        overflow-y: auto;">
+
+                <button onclick="window.closeLogAction()" style="
+            position: absolute; 
+            top: 15px; right: 15px; 
+            border: none; background: #f0f0f0; 
+            width: 30px; height: 30px; border-radius: 50%; 
+            cursor: pointer; font-weight: bold;">✕</button>
+
+                <h3 id="modalTitle" data-i18n="modalTitle" style="margin-top: 0; color: #1f2937;">Log New Action</h3>
+
+                <form id="logActionForm" onsubmit="window.submitAction(event)">
+
+                    <label data-i18n="lblType"
+                        style="display:block; margin-top:10px; font-weight:600; font-size: 0.9rem;">Action Type:</label>
+                    <select id="actionType"
+                        style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; margin-bottom:10px;">
+                        <option value="Fertilizer" data-i18n="optFertilizer">Fertilizer Application</option>
+                        <option value="Irrigation" data-i18n="optIrrigation">Irrigation (Watering)</option>
+                        <option value="Pesticide" data-i18n="optPesticide">Pesticide Spray</option>
+                        <option value="Harvest" data-i18n="optHarvest">Harvesting</option>
+                        <option value="Labor" data-i18n="optLabor">Manual Labor</option>
+                    </select>
+
+
+                    <label data-i18n="lblDate" style="display:block; font-weight:600; font-size: 0.9rem;">Date:</label>
+                    <input type="date" id="actionDate" required
+                        style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; margin-bottom:10px;">
+
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1;">
+                            <label data-i18n="lblQty"
+                                style="display:block; font-weight:600; font-size: 0.9rem;">Quantity:</label>
+                            <input type="number" id="actionQuantity" placeholder="50"
+                                style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label data-i18n="lblUnit"
+                                style="display:block; font-weight:600; font-size: 0.9rem;">Unit:</label>
+                            <select id="actionUnit"
+                                style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px;">
+                                <option value="kg" data-i18n="unitKg">kg</option>
+                                <option value="liters" data-i18n="unitLiters">Liters</option>
+                                <option value="bags" data-i18n="unitBags">Bags</option>
+                                <option value="hours" data-i18n="unitHours">Hours</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <label data-i18n="lblCost"
+                        style="display:block; margin-top:10px; font-weight:600; font-size: 0.9rem;">Estimated Cost
+                        (₹):</label>
+                    <input type="number" id="actionCost" placeholder="0"
+                        style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; margin-bottom:10px;">
+
+                    <label data-i18n="lblNotes"
+                        style="display:block; font-weight:600; font-size: 0.9rem;">Notes:</label>
+                    <textarea id="actionNotes"
+                        style="width:100%; padding:10px; border:1px solid #ddd; border-radius:8px; margin-bottom:20px; min-height: 60px;"></textarea>
+
+                    <button type="submit" data-i18n="btnSave" style="
+                width: 100%; 
+                padding: 12px; 
+                background: #008000; 
+                color: white; 
+                font-weight: bold;
+                border: none; 
+                border-radius: 8px; 
+                cursor: pointer;">
+                        Save Action
+                    </button>
+                </form>
+
+                <div style="text-align:center; margin-top:15px; font-size:0.8rem;">
+                    <a href="#" onclick="changeLanguage('en')" style="margin:0 5px; color:blue;">English</a> |
+                    <a href="#" onclick="changeLanguage('hi')" style="margin:0 5px; color:blue;">हिंदी (Hindi)</a> |
+                    <a href="#" onclick="changeLanguage('gu')" style="margin:0 5px; color:blue;">ગુજરાતી (Gujarati)</a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr class="section-divider">
+
+       <section id="carbon" class="section-wrap" data-role="farmer,fpo" aria-labelledby="carbon-title">
+    <div class="section-title">
+        <h2 id="carbon-title" data-i18n="carbonTitle">Carbon Credits <i data-lucide="cloud-lightning"
+                style="color:var(--leaf);margin-top:4px"></i> — simple & farmer-friendly</h2>
+    </div>
+    <p class="section-sub" data-i18n="carbonSub">How soil carbon increases and how farmers earn ₹800 per
+        verified credit</p>
+
+    <div class="carbon-main-grid"> 
+        <div class="carbon-info-col">
+            <div class="card carbon-feature-card">
+                <h3 data-i18n="creditWhatTitle">What is a carbon credit?</h3>
+                <p data-i18n-html="creditWhatDesc">A verified unit representing stored
+                    $\text{CO}_2$. Regenerative practices increase **Soil Organic Carbon (SOC)** which is
+                    verified using $\text{AI}$ and converted into marketable credits.</p>
+            </div>
+            <div class="card carbon-feature-card carbon-card-spacing">
+                <h3 data-i18n="creditEarnTitle">How it earns ₹800</h3>
+                <p data-i18n-html="creditEarnDesc">Each verified credit pays the farmer
+                    approximately **₹800**. Verification is conducted through independent, certified partners
+                    (e.g., Carboneg) using digital traceability for transparency.</p>
+            </div>
+            <div class="card carbon-feature-card carbon-card-spacing">
+                <h3 data-i18n="targetTitle">Target & Scalability</h3>
+                <p data-i18n-html="targetDesc">Our goal is to onboard **50,000+ farmers**
+                    across **5,00,000 hectares** in 3 years—providing essential training and continuous field
+                    support.</p>
+            </div>
+            <div class="card carbon-feature-card carbon-card-spacing">
+    <h3 data-i18n="creditBenefitTitle">Beyond Carbon: Soil Health & Yield</h3>
+    <p data-i18n-html="creditBenefitDesc">Regenerative farming improves **water retention**, reduces the need for expensive chemical inputs, and increases overall **soil resilience**, leading to stable or higher yields over time.</p>
+</div>
+        </div>
+
+        <div class="carbon-sidebar-col">
+            <div class="card">
+                <h3 data-i18n="calcTitle">Farmer Income Calculator</h3>
+                <div class="calc">
+                    <div class="left">
+                        <div class="calc-input-group">
+                            <label id="label-area" data-i18n="labelArea">Area (hectares)</label>
+                            <div class="calc-input-wrapper">
+                                <input id="area" type="number" min="0" step="0.1" placeholder="e.g. 1.5" required>
+                            </div>
+                            <div class="calc-hint">
+                                <i data-lucide="info" style="width:14px;height:14px"></i>
+                                <span>Enter your farm area</span>
+                            </div>
+                        </div>
+                        <div class="calc-input-group">
+                            <label id="label-practice" data-i18n="labelPractice">Practice factor (0.1 - 1)</label>
+                            <div class="calc-input-wrapper">
+                                <select id="practice">
+                                    <option value="0.2" data-i18n="optMinimal">Minimal regenerative (0.2)
+                                    </option>
+                                    <option value="0.5" selected data-i18n="optGood">Good practice (0.5)
+                                    </option>
+                                    <option value="0.8" data-i18n="optAdvanced">Advanced (0.8)</option>
+                                </select>
+                            </div>
+                            <div class="calc-hint">
+                                <i data-lucide="trending-up" style="width:14px;height:14px"></i>
+                                <span>Higher factor = more credits</span>
+                            </div>
+                        </div>
+                        <div class="calc-assumption-box"
+                            data-i18n="calcAssumption">Assumption: 1 credit $\approx$ 1 tonne $\text{CO}_2$
+                            sequestered; ₹800/credit</div>
+                    </div>
+                    <div class="right">
+                        <div class="result" id="calcResult" aria-live="polite">
+                            <span class="result-placeholder" data-i18n="calcPlaceholder">Enter area & practice
+                                to estimate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card carbon-card-spacing">
+                <h3 style="margin-top:0" data-i18n="transparencyTitle">Supply Chain Transparency</h3>
+                <p data-i18n="transparencyDesc">View the digital ledger (mock) of a verified batch.</p>
+                <button class="btn secondary" id="traceBtn" style="width:100%" data-i18n="traceBtn">Show
+                    Traceability Demo</button>
+            </div>
+        </div>
+        <div class="faq-section">
+            </div>
+    </div>
+</section>
+
+        <hr class="section-divider">
+        <section id="finance" class="section-wrap" data-role="farmer,fpo,investor" aria-labelledby="finance-title">
+            <div class="section-title">
+                <h2 id="finance-title" data-i18n="financeTitle">Financial Tools & Services <span
+                        style="color:var(--primary-green);">Rupiya</span></h2>
+                <p data-i18n="financeSub">
+                    Interactive, data-driven tools for transparent planning and management of agricultural finances.
+                </p>
+            </div>
+
+            <div class="role-tabs ">
+                <button class="tab-btn active" data-role="farmer" data-i18n="roleFarmer">Farmers</button>
+                <button class="tab-btn" data-role="fpo" data-i18n="roleFpo">FPOs (Producer Orgs)</button>
+                <button class="tab-btn" data-role="investor" data-i18n="roleInvestor">Investors</button>
+            </div>
+
+            <div class="role-content">
+
+                <div class="role-section" data-role="farmer" style="display: grid;">
+
+                    <div class="card clickable-card" data-card-id="farmer-credit">
+                        <h3 style="color:var(--primary-green);" data-icon="&#xf53a;" data-i18n="fCreditTitle"> 💰
+                            Agri-Credit Eligibility</h3>
+                        <p class="card-summary" data-i18n="fCreditSummary">Determine your maximum credit capacity based
+                            on land productivity and collateral value.</p>
+                        <div class="card-content" data-content-id="farmer-credit">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="farmer-credit-area" data-i18n="fCreditLabelArea">Area (acres)</label>
+                                    <input id="farmer-credit-area" type="number" min="0" step="0.1" value="1.5">
+                                </div>
+                                <div class="form-item">
+                                    <label for="farmer-credit-yield" data-i18n="fCreditLabelYield"> Expected Yield
+                                        (tons/acre)</label>
+                                    <input id="farmer-credit-yield" type="number" min="0" step="0.1" value="1.2">
+                                </div>
+                                <button id="farmer-credit-calc" class="calc-btn"
+                                    style="background:var(--primary-green);" data-i18n="fCreditBtn">Calculate</button>
+                            </div>
+                            <div id="farmer-credit-result" class="result"
+                                style="background:rgba(0, 135, 90, 0.1); border-color:var(--primary-green); color:var(--primary-green);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="farmer-gold">
+                        <h3 style="color:var(--secondary-blue);" data-icon="&#xf217;" data-i18n="fGoldTitle"> 💎 Digital
+                            Gold Savings</h3>
+                        <p class="card-summary" data-i18n="fGoldSummary">Simulate how your monthly savings translate
+                            into tangible, secure digital gold assets.</p>
+                        <div class="card-content" data-content-id="farmer-gold">
+                            <div class="form-row">
+                                <div class="form-item" style="min-width: 150px;">
+                                    <label for="farmer-gold-amount" data-i18n="fGoldLabelAmount">Investment Amount
+                                        (₹)</label>
+                                    <input id="farmer-gold-amount" type="number" min="0" step="100" value="5000">
+                                </div>
+                                <button id="farmer-gold-calc" class="calc-btn" style="background:var(--secondary-blue);"
+                                    data-i18n="fGoldBtn">Simulate</button>
+                            </div>
+                            <div id="farmer-gold-result" class="result"
+                                style="background:rgba(28, 103, 184, 0.1); border-color:var(--secondary-blue); color:var(--secondary-blue);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="farmer-insurance">
+                        <h3 style="color:var(--warning-orange);" data-icon="&#xf5e1;" data-i18n="fInsuranceTitle"> 🛡️
+                            Crop Insurance Quote</h3>
+                        <p class="card-summary" data-i18n="fInsuranceSummary">Estimate premium and the potential maximum
+                            payout for severe yield loss events.</p>
+                        <div class="card-content" data-content-id="farmer-insurance">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="farmer-insurance-crop" data-i18n="fInsuranceLabelCrop">Crop Type</label>
+                                    <select id="farmer-insurance-crop">
+                                        <option value="wheat" data-i18n="cropWheat">Wheat</option>
+                                        <option value="rice" data-i18n="cropRice">Rice</option>
+                                    </select>
+                                </div>
+                                <div class="form-item">
+                                    <label for="farmer-insurance-area" data-i18n="fInsuranceLabelArea">Insured Area
+                                        (acres)</label>
+                                    <input id="farmer-insurance-area" type="number" min="0" step="0.1" value="1.5">
+                                </div>
+                                <button id="farmer-insurance-calc" class="calc-btn"
+                                    style="background:var(--warning-orange);" data-i18n="fInsuranceBtn">Get
+                                    Quote</button>
+                            </div>
+                            <div id="farmer-insurance-result" class="result"
+                                style="background:rgba(230, 138, 0, 0.1); border-color:var(--warning-orange); color:var(--warning-orange);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="farmer-pay">
+                        <h3 style="color:var(--pay-green);" data-icon="&#xf09d;" data-i18n="fPayTitle">💳 Rupiya Pay
+                            Transactions</h3>
+                        <p class="card-summary" data-i18n="fPaySummary">Simulate instant, UPI-powered payments,
+                            providing a digital paper trail for all input costs.</p>
+                        <div class="card-content" data-content-id="farmer-pay">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="farmer-pay-type" data-i18n="fPayLabelPurpose">Payment Purpose</label>
+                                    <select id="farmer-pay-type">
+                                        <option value="seed" data-i18n="fPayOptionSeed">Seeds/Fertilizers</option>
+                                        <option value="labour" data-i18n="fPayOptionLabour">Farm Labour Wages</option>
+                                    </select>
+                                </div>
+                                <div class="form-item">
+                                    <label for="farmer-pay-amount" data-i18n="fPayLabelAmount">Amount (₹)</label>
+                                    <input id="farmer-pay-amount" type="number" min="1" step="100" value="2500">
+                                </div>
+                                <button id="farmer-pay-calc" class="calc-btn" style="background:var(--pay-green);"
+                                    data-i18n="fPayBtn">Pay Now</button>
+                            </div>
+                            <div id="farmer-pay-result" class="result"
+                                style="background:rgba(46, 204, 113, 0.1); border-color:var(--pay-green); color:var(--pay-green);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="farmer-costs">
+                        <h3 style="color:var(--neutral-dark);" data-icon="&#xf51e;" data-i18n="fCostTitle"> 📊 Input
+                            Cost Tracker</h3>
+                        <p class="card-summary" data-i18n="fCostSummary">Budget the estimated variable costs (e.g.,
+                            diesel, chemicals, labor) per acre for the upcoming season.</p>
+                        <div class="card-content" data-content-id="farmer-costs">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="farmer-costs-area" data-i18n="fCostLabelArea">Cultivated Area
+                                        (acres)</label>
+                                    <input id="farmer-costs-area" type="number" min="0" step="0.1" value="2.0">
+                                </div>
+                                <div class="form-item">
+                                    <label for="farmer-costs-crop" data-i18n="fCostLabelIntensity">Crop
+                                        Intensity</label>
+                                    <select id="farmer-costs-crop">
+                                        <option value="low" data-i18n="fCostOptionLow">Low (Pulses)</option>
+                                        <option value="medium" data-i18n="fCostOptionMedium">Medium (Wheat/Rice)
+                                        </option>
+                                        <option value="high" data-i18n="fCostOptionHigh">High (Vegetables)</option>
+                                    </select>
+                                </div>
+                                <button id="farmer-costs-calc" class="calc-btn" style="background:var(--neutral-dark);"
+                                    data-i18n="fCostBtn">Estimate Costs</button>
+                            </div>
+                            <div id="farmer-costs-result" class="result"
+                                style="background:rgba(31, 41, 55, 0.1); border-color:var(--neutral-dark); color:var(--neutral-dark);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="farmer-volatility">
+                        <h3 style="color:var(--warning-orange);" data-icon="&#xf0d7;" data-i18n="fPriceTitle">📈Price
+                            Volatility Alert</h3>
+                        <p class="card-summary" data-i18n="fPriceSummary">Analyze historical trends to project the
+                            min/max market price range for your harvest commodity.</p>
+                        <div class="card-content" data-content-id="farmer-volatility">
+                            <div class="form-row">
+                                <div class="form-item" style="min-width: 150px;">
+                                    <label for="farmer-volatility-commodity"
+                                        data-i18n="fPriceLabelCommodity">Commodity</label>
+                                    <select id="farmer-volatility-commodity">
+                                        <option value="wheat" data-i18n="cropWheat">Wheat</option>
+                                        <option value="cotton" data-i18n="commodityCotton">Cotton</option>
+                                        <option value="maize" data-i18n="commodityMaize">Maize</option>
+                                    </select>
+                                </div>
+                                <div class="form-item">
+                                    <label for="farmer-volatility-time" data-i18n="fPriceLabelTime">Time Horizon
+                                        (Months)</label>
+                                    <input id="farmer-volatility-time" type="number" min="1" max="12" value="3">
+                                </div>
+                                <button id="farmer-volatility-calc" class="calc-btn"
+                                    style="background:var(--warning-orange);" data-i18n="fPriceBtn">Analyze</button>
+                            </div>
+                            <div id="farmer-volatility-result" class="result"
+                                style="background:rgba(230, 138, 0, 0.1); border-color:var(--warning-orange); color:var(--warning-orange);">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="role-section" data-role="fpo" style="display:none;">
+
+                    <div class="card clickable-card" data-card-id="fpo-revenue">
+                        <h3 style="color:var(--primary-green);" data-icon="&#xf200;" data-i18n="fpoRevenueTitle">✨
+                            Revenue Forecast</h3>
+                        <p class="card-summary" data-i18n="fpoRevenueSummary">Project collective revenue by combining
+                            sales volume and secondary income (e.g., warehousing).</p>
+                        <div class="card-content" data-content-id="fpo-revenue">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="fpo-members" data-i18n="fpoRevenueLabelMembers">Number of
+                                        Members</label>
+                                    <input id="fpo-members" type="number" min="1" value="50">
+                                </div>
+                                <div class="form-item">
+                                    <label for="fpo-yield" data-i18n="fpoRevenueLabelYield">Avg. Yield
+                                        (tons/member)</label>
+                                    <input id="fpo-yield" type="number" min="0" step="0.1" value="1.5">
+                                </div>
+                                <button id="fpo-revenue-calc" class="calc-btn" style="background:var(--primary-green);"
+                                    data-i18n="fCreditBtn">Calculate</button>
+                            </div>
+                            <div id="fpo-revenue-result" class="result"
+                                style="background:rgba(0, 135, 90, 0.1); border-color:var(--primary-green); color:var(--primary-green);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="fpo-loan">
+                        <h3 style="color:var(--secondary-blue);" data-icon="&#xf0a0;" data-i18n="fpoLoanTitle">
+                            📱Equipment Loan Calculator</h3>
+                        <p class="card-summary" data-i18n="fpoLoanSummary">Estimate the monthly EMI and total interest
+                            for a collective loan to acquire heavy machinery (e.g., tractor).</p>
+                        <div class="card-content" data-content-id="fpo-loan">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="fpo-loan-amount" data-i18n="fpoLoanLabelAmount">Loan Amount (₹)</label>
+                                    <input id="fpo-loan-amount" type="number" min="100000" step="10000" value="500000">
+                                </div>
+                                <div class="form-item">
+                                    <label for="fpo-loan-years" data-i18n="fpoLoanLabelTerm">Term (Years)</label>
+                                    <input id="fpo-loan-years" type="number" min="1" max="10" value="5">
+                                </div>
+                                <button id="fpo-loan-calc" class="calc-btn" style="background:var(--secondary-blue);"
+                                    data-i18n="fpoLoanBtn">Calculate EMI</button>
+                            </div>
+                            <div id="fpo-loan-result" class="result"
+                                style="background:rgba(28, 103, 184, 0.1); border-color:var(--secondary-blue); color:var(--secondary-blue);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="fpo-carbon">
+                        <h3 style="color:var(--sustainability-teal);" data-icon="&#xf55f;" data-i18n="fpoCarbonTitle">
+                            🌿Carbon Credit Forecast</h3>
+                        <p class="card-summary" data-i18n="fpoCarbonSummary">Project guaranteed income from
+                            transitioning FPO farmland to certified sustainable farming practices.</p>
+                        <div class="card-content" data-content-id="fpo-carbon">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="fpo-carbon-acres" data-i18n="fpoCarbonLabelArea">Total Area
+                                        (acres)</label>
+                                    <input id="fpo-carbon-acres" type="number" min="10" step="10" value="100">
+                                </div>
+                                <div class="form-item">
+                                    <label for="fpo-carbon-practice" data-i18n="fpoCarbonLabelPractice">Sustainable
+                                        Practice</label>
+                                    <select id="fpo-carbon-practice">
+                                        <option value="zero" data-i18n="fpoCarbonOptionTillage">Zero Tillage</option>
+                                        <option value="cover" data-i18n="fpoCarbonOptionCover">Cover Cropping</option>
+                                    </select>
+                                </div>
+                                <button id="fpo-carbon-calc" class="calc-btn"
+                                    style="background:var(--sustainability-teal);"
+                                    data-i18n="fpoCarbonBtn">Forecast</button>
+                            </div>
+                            <div id="fpo-carbon-result" class="result"
+                                style="background:rgba(0, 163, 129, 0.1); border-color:var(--sustainability-teal); color:var(--sustainability-teal);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="role-section" data-role="investor" style="display:none;">
+
+                    <div class="card clickable-card" data-card-id="investor-roi">
+                        <h3 style="color:var(--secondary-blue);" data-icon="&#xf201;" data-i18n="invROITitle">🌱 Impact
+                            & ROI Simulation</h3>
+                        <p class="card-summary" data-i18n="invROISummary">Simulate the expected financial return (ROI)
+                            and quantifiable environmental impact (CO2e reduction).</p>
+                        <div class="card-content" data-content-id="investor-roi">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="investor-amount" data-i18n="invROILabelAmount">Investment Principal
+                                        (₹)</label>
+                                    <input id="investor-amount" type="number" min="10000" step="5000" value="100000">
+                                </div>
+                                <div class="form-item">
+                                    <label for="investor-region" data-i18n="invROILabelRegion">Target Region</label>
+                                    <select id="investor-region">
+                                        <option value="north" data-i18n="invROIOptionNorth">North India</option>
+                                        <option value="south" data-i18n="invROIOptionSouth">South India</option>
+                                    </select>
+                                </div>
+                                <button id="investor-calc" class="calc-btn" style="background:var(--secondary-blue);"
+                                    data-i18n="fGoldBtn">Simulate</button>
+                            </div>
+                            <div id="investor-result" class="result"
+                                style="background:rgba(28, 103, 184, 0.1); border-color:var(--secondary-blue); color:var(--secondary-blue);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card clickable-card" data-card-id="investor-esg">
+                        <h3 style="color:var(--sustainability-teal);" data-icon="&#xf559;" data-i18n="invESGTitle">🌟ESG
+                            Impact Score</h3>
+                        <p class="card-summary" data-i18n="invESGSummary">Get an independent score (0-100) reflecting
+                            the Environmental, Social, and Governance compliance of the project.</p>
+                        <div class="card-content" data-content-id="investor-esg">
+                            <div class="form-row">
+                                <div class="form-item">
+                                    <label for="investor-esg-sector" data-i18n="invESGLabelFocus">Primary Impact
+                                        Focus</label>
+                                    <select id="investor-esg-sector">
+                                        <option value="water" data-i18n="invESGOptionWater">Water Efficiency</option>
+                                        <option value="soil" data-i18n="invESGOptionSoil">Soil Health</option>
+                                        <option value="community" data-i18n="invESGOptionCommunity">Community Support
+                                        </option>
+                                    </select>
+                                </div>
+                                <div class="form-item">
+                                    <label for="investor-esg-size" data-i18n="invESGLabelSize">Project Size (Cr
+                                        ₹)</label>
+                                    <input id="investor-esg-size" type="number" min="0.1" step="0.1" value="5.0">
+                                </div>
+                                <button id="investor-esg-calc" class="calc-btn"
+                                    style="background:var(--sustainability-teal);" data-i18n="invESGBtn">Get
+                                    Score</button>
+                            </div>
+                            <div id="investor-esg-result" class="result"
+                                style="background:rgba(0, 163, 129, 0.1); border-color:var(--sustainability-teal); color:var(--sustainability-teal);">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="features-buyer" class="section-wrap" data-role="buyer">
+            <div class="container">
+
+                <div class="card wide-card show">
+                    <h3 data-i18n="traceabilityTitle">Product Traceability</h3>
+                    <p data-i18n="traceabilitySub">Track our residue-free produce back to the farm and view verified
+                        carbon credits.</p>
+                    <div id="ledgerBody">
+                    </div>
+                    <button id="traceabilityDemoBtn" class="btn btn-secondary" data-i18n="traceabilityBtn">View Demo
+                        Ledger</button>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Step-by-Step Farmer Journey UI -->
+        <section id="journey" class="section-wrap" data-role="farmer" aria-labelledby="journey-title">
+            <div class="section-title">
+                <h2 id="journey-title" class="accessible-heading" data-i18n="journeyTitle">Your Journey to Carbon
+                    Credits <i data-lucide="map" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="journeySub">Simple steps from registration to earning
+                carbon credits</p>
+
+            <div class="journey-container">
+                <div class="journey-timeline">
+                    <div class="journey-step">
+                        <div class="journey-step-content">
+                            <div class="journey-step-number">1</div>
+                            <h3 data-i18n="journeyStep1Title">Registration & Field Mapping</h3>
+                            <p class="accessible-text" data-i18n="journeyStep1Desc">Sign up with your mobile number, add
+                                your farm details, and map your fields using GPS or satellite imagery. Our team verifies
+                                your information.</p>
+                        </div>
+                        <div class="journey-step-icon">
+                            <i data-lucide="user-plus" style="width:40px;height:40px"></i>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="journey-step-content">
+                            <div class="journey-step-number">2</div>
+                            <h3 data-i18n="journeyStep2Title">Soil Testing & Analysis</h3>
+                            <p class="accessible-text" data-i18n="journeyStep2Desc">Satellite-based soil testing
+                                analyzes your field's organic carbon levels. AI processes the data to create your
+                                baseline soil health score.</p>
+                        </div>
+                        <div class="journey-step-icon">
+                            <i data-lucide="flask-conical" style="width:40px;height:40px"></i>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="journey-step-content">
+                            <div class="journey-step-number">3</div>
+                            <h3 data-i18n="journeyStep3Title">AI Recommendations</h3>
+                            <p class="accessible-text" data-i18n="journeyStep3Desc">Receive personalized recommendations
+                                for regenerative practices: organic inputs, crop rotation, cover crops, and residue
+                                management tailored to your field.</p>
+                        </div>
+                        <div class="journey-step-icon">
+                            <i data-lucide="brain" style="width:40px;height:40px"></i>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="journey-step-content">
+                            <div class="journey-step-number">4</div>
+                            <h3 data-i18n="journeyStep4Title">Implementation Support</h3>
+                            <p class="accessible-text" data-i18n="journeyStep4Desc">Get on-field support from
+                                agronomists, access to quality inputs, and step-by-step mobile guidance. Log your
+                                activities through the app.</p>
+                        </div>
+                        <div class="journey-step-icon">
+                            <i data-lucide="handshake" style="width:40px;height:40px"></i>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="journey-step-content">
+                            <div class="journey-step-number">5</div>
+                            <h3 data-i18n="journeyStep5Title">Monitoring & Verification</h3>
+                            <p class="accessible-text" data-i18n="journeyStep5Desc">Satellite monitoring tracks your
+                                progress. AI verifies your practices match recommendations. Regular compliance scores
+                                show your carbon credit potential.</p>
+                        </div>
+                        <div class="journey-step-icon">
+                            <i data-lucide="satellite" style="width:40px;height:40px"></i>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="journey-step-content">
+                            <div class="journey-step-number">6</div>
+                            <h3 data-i18n="journeyStep6Title">Carbon Credit Generation</h3>
+                            <p class="accessible-text" data-i18n="journeyStep6Desc">After 12-18 months of verified
+                                practices, your increased soil organic carbon is converted into verified carbon credits
+                                by certified partners.</p>
+                        </div>
+                        <div class="journey-step-icon">
+                            <i data-lucide="leaf" style="width:40px;height:40px"></i>
+                        </div>
+                    </div>
+
+                    <div class="journey-step">
+                        <div class="journey-step-content">
+                            <div class="journey-step-number">7</div>
+                            <h3 data-i18n="journeyStep7Title">Payment & Rewards</h3>
+                            <p class="accessible-text" data-i18n="journeyStep7Desc">Receive ₹800 per verified credit
+                                directly to your bank account within 30 days. Track your earnings and access additional
+                                financial services.</p>
+                        </div>
+                        <div class="journey-step-icon">
+                            <i data-lucide="wallet" style="width:40px;height:40px"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- FPO Partnership Dashboard UI -->
+        <section id="fpo-dashboard" class="section-wrap" data-role="fpo" aria-labelledby="fpo-title"
+            style="display: none;">
+            <div class="section-title">
+                <h2 id="fpo-title" class="accessible-heading" data-i18n="fpoTitle">FPO Partnership Dashboard <i
+                        data-lucide="users" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="fpoSub">Manage your member farmers, track group
+                performance, and maximize collective carbon credit earnings</p>
+
+            <div class="fpo-dashboard">
+                <div class="fpo-stat-card">
+                    <i data-lucide="users" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value" id="fpo-member-count">1,247</div>
+                    <div class="fpo-stat-label" data-i18n="fpoStat1Label">Active Member Farmers</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoStat1Desc">Across 15 villages</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="trending-up" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">₹2.4L</div>
+                    <div class="fpo-stat-label" data-i18n="fpoStat2Label">Total Carbon Revenue</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoStat2Desc">This quarter</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="check-circle" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">3,120</div>
+                    <div class="fpo-stat-label" data-i18n="fpoStat3Label">Verified Credits</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoStat3Desc">Generated this year</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="map-pin" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">2,850</div>
+                    <div class="fpo-stat-label" data-i18n="fpoStat4Label">Hectares Monitored</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoStat4Desc">Under FPO management</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="truck" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">₹18.5L</div>
+                    <div class="fpo-stat-label" data-i18n="fpoStat5Label">Bulk Procurement Value</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoStat5Desc">Residue-free produce</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="award" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">87%</div>
+                    <div class="fpo-stat-label" data-i18n="fpoStat6Label">Compliance Score</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoStat6Desc">Group average</div>
+                </div>
+
+                <div class="fpo-chart-container">
+                    <h3 style="margin-top:0;color:var(--cloud-navy)" data-i18n="fpoChartTitle">Member Growth & Carbon
+                        Credits Over Time</h3>
+
+                    <!-- chart wrapper keeps same visual look, canvas inside it for Chart.js -->
+                    <div id="fpo-chart-wrap"
+                        style="height:300px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f0fff0,#ffffff);border-radius:12px;margin-top:20px;padding:12px;">
+                        <canvas id="fpoChart" style="width:100%;height:100%;max-height:100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- FPO Member Management -->
+        <section id="fpo-members" class="section-wrap" data-role="fpo" style="display: none;"
+            aria-labelledby="fpo-members-title">
+            <div class="section-title">
+                <h2 id="fpo-members-title" class="accessible-heading" data-i18n="fpoMembersTitle">Member Management <i
+                        data-lucide="users" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="fpoMembersSub">Track and manage your FPO member farmers,
+                their fields, and compliance status</p>
+
+            <div class="fpo-dashboard" style="margin-top:30px">
+                <div class="fpo-stat-card">
+                    <i data-lucide="user-check" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">892</div>
+                    <div class="fpo-stat-label" data-i18n="fpoMembersActive">Active Members</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoMembersActiveDesc">Compliant with practices</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="map-pin" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">1,240</div>
+                    <div class="fpo-stat-label" data-i18n="fpoMembersFields">Total Fields</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoMembersFieldsDesc">Under monitoring</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="trending-up" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">94%</div>
+                    <div class="fpo-stat-label" data-i18n="fpoMembersCompliance">Average Compliance</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoMembersComplianceDesc">This quarter</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="calendar" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">24</div>
+                    <div class="fpo-stat-label" data-i18n="fpoMembersTraining">Training Sessions</div>
+                    <div class="fpo-stat-desc" data-i18n="fpoMembersTrainingDesc">Scheduled this month</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- FPO Bulk Procurement -->
+        <section id="fpo-procurement" class="section-wrap" data-role="fpo" style="display: none;"
+            aria-labelledby="fpo-procurement-title">
+            <div class="section-title">
+                <h2 id="fpo-procurement-title" class="accessible-heading" data-i18n="fpoProcurementTitle">Bulk
+                    Procurement <i data-lucide="truck" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="fpoProcurementSub">Manage bulk procurement of residue-free
+                produce from member farmers</p>
+
+            <div class="grid" style="margin-top:30px">
+                <div class="card">
+                    <i data-lucide="package" class="icon-lg"></i>
+                    <h3 data-i18n="fpoProcurement1Title">Aggregation Hub</h3>
+                    <p data-i18n="fpoProcurement1Desc">Central collection point for member produce with quality checks
+                        and sorting facilities.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="scale" class="icon-lg"></i>
+                    <h3 data-i18n="fpoProcurement2Title">Quality Assurance</h3>
+                    <p data-i18n="fpoProcurement2Desc">Automated quality testing and certification before bulk sale to
+                        buyers.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="dollar-sign" class="icon-lg"></i>
+                    <h3 data-i18n="fpoProcurement3Title">Fair Pricing</h3>
+                    <p data-i18n="fpoProcurement3Desc">Transparent pricing model ensuring fair returns to all member
+                        farmers.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+
+        <!-- Buyer Product Catalog -->
+        <section id="buyer-catalog" class="section-wrap" data-role="buyer" style="display: none;"
+            aria-labelledby="buyer-catalog-title">
+            <div class="section-title">
+                <h2 id="buyer-catalog-title" class="accessible-heading" data-i18n="buyerCatalogTitle">Residue-Free
+                    Product Catalog <i data-lucide="shopping-cart" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="buyerCatalogSub">Browse verified residue-free produce with
+                complete traceability</p>
+
+            <div class="buyer-catalog">
+
+                <!-- PRODUCT 1 -->
+                <div class="product-card" data-id="p-wheat" data-name-key="product1Name" data-price-key="product1Price"
+                    data-origin="Verified farms - Haryana" data-cert="Certified (Residue-Free)"
+                    data-desc-key="product1DescFull">
+                    <div class="product-badge" data-i18n="productBadgeCertified">Certified</div>
+                    <div class="product-image">
+                        <img src="images/wheat.jpg" alt="Organic Wheat" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product1Name">Organic Wheat</h3>
+                    <p class="product-short" data-i18n="product1Desc">Premium quality, residue-free wheat from verified
+                        farms</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product1Price">₹2,800/quintal</span>
+                        <button class="btn view-details" data-product="p-wheat" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+                <!-- PRODUCT 2 -->
+                <div class="product-card" data-id="p-cotton" data-name-key="product2Name" data-price-key="product2Price"
+                    data-origin="Gujarat & Maharashtra" data-cert="Traceable Carbon-Certified"
+                    data-desc-key="product2DescFull">
+                    <div class="product-badge" data-i18n="productBadgeCertified">Certified</div>
+                    <div class="product-image">
+                        <img src="images/cotton.jpg" alt="Organic Cotton" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product2Name">Organic Cotton</h3>
+                    <p class="product-short" data-i18n="product2Desc">Traceable organic cotton with carbon credit
+                        certification</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product2Price">₹6,500/quintal</span>
+                        <button class="btn view-details" data-product="p-cotton" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 3 -->
+                <div class="product-card" data-id="p-vegs" data-name-key="product3Name" data-price-key="product3Price"
+                    data-origin="Local FPOs" data-cert="Residue-Free Verified" data-desc-key="product3DescFull">
+                    <div class="product-badge" data-i18n="productBadgeCertified">Certified</div>
+                    <div class="product-image">
+                        <img src="images/vegetables.jpg" alt="Organic Vegetables" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product3Name">Organic Vegetables</h3>
+                    <p class="product-short" data-i18n="product3Desc">Fresh, residue-free vegetables from verified farms
+                    </p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product3Price">₹45/kg</span>
+                        <button class="btn view-details" data-product="p-vegs" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 4 -->
+                <div class="product-card" data-id="p-rice" data-name-key="product4Name" data-price-key="product4Price"
+                    data-origin="Punjab" data-cert="Residue-Free / Traceable" data-desc-key="product4DescFull">
+                    <div class="product-badge" data-i18n="productBadgeVerified">Verified</div>
+                    <div class="product-image">
+                        <img src="images/rice.jpeg" alt="Sustainable Rice" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product4Name">Sustainable Rice</h3>
+                    <p class="product-short" data-i18n="product4Desc">Paddy from residue-minimised practices and
+                        lab-tested lots</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product4Price">₹3,200/quintal</span>
+                        <button class="btn view-details" data-product="p-rice" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 5 -->
+                <div class="product-card" data-id="p-pulses" data-name-key="product5Name" data-price-key="product5Price"
+                    data-origin="Madhya Pradesh" data-cert="Residue-Free" data-desc-key="product5DescFull">
+                    <div class="product-badge" data-i18n="productBadgeVerified">Verified</div>
+                    <div class="product-image">
+                        <img src="images/pulses.jpg" alt="Organic Pulses" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product5Name">Organic Pulses</h3>
+                    <p class="product-short" data-i18n="product5Desc">Chana & tur — traceable and residue-free</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product5Price">₹6,000/quintal</span>
+                        <button class="btn view-details" data-product="p-pulses" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 6 -->
+                <div class="product-card" data-id="p-spices" data-name-key="product6Name" data-price-key="product6Price"
+                    data-origin="Kerala" data-cert="Residue-Free / Organic" data-desc-key="product6DescFull">
+                    <div class="product-badge" data-i18n="productBadgeOrganic">Organic</div>
+                    <div class="product-image">
+                        <img src="images/spices.jpg" alt="Aromatic Spices" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product6Name">Aromatic Spices</h3>
+                    <p class="product-short" data-i18n="product6Desc">Pepper, cardamom, turmeric — certified organic &
+                        residue-free</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product6Price">₹180/kg</span>
+                        <button class="btn view-details" data-product="p-spices" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 7 -->
+                <div class="product-card" data-id="p-sugarcane" data-name-key="product7Name"
+                    data-price-key="product7Price" data-origin="UP" data-cert="Verified"
+                    data-desc-key="product7DescFull">
+                    <div class="product-badge" data-i18n="productBadgeVerified">Verified</div>
+                    <div class="product-image">
+                        <img src="images/sugarcane.jpg" alt="Residue-Free Sugarcane" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product7Name">Residue-Free Sugarcane</h3>
+                    <p class="product-short" data-i18n="product7Desc">Cane supplied through FPO procurement channels</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product7Price">₹2,200/quintal</span>
+                        <button class="btn view-details" data-product="p-sugarcane" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 8 -->
+                <div class="product-card" data-id="p-oilseeds" data-name-key="product8Name"
+                    data-price-key="product8Price" data-origin="Rajasthan" data-cert="Residue-Free"
+                    data-desc-key="product8DescFull">
+                    <div class="product-badge" data-i18n="productBadgeCertified">Certified</div>
+                    <div class="product-image">
+                        <img src="images/oilseeds.png" alt="Cold-Pressed Oilseeds" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product8Name">Cold-Pressed Oilseeds</h3>
+                    <p class="product-short" data-i18n="product8Desc">Sunflower & sesame — residue-safe for premium oil
+                        extraction</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product8Price">₹5,500/quintal</span>
+                        <button class="btn view-details" data-product="p-oilseeds" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+                <!-- PRODUCT 9 -->
+                <div class="product-card" data-id="p-fruits" data-name-key="product9Name" data-price-key="product9Price"
+                    data-origin="Maharashtra" data-cert="Residue-Free" data-desc-key="product9DescFull">
+                    <div class="product-badge" data-i18n="productBadgeCertified">Certified</div>
+                    <div class="product-image">
+                        <img src="images/fruits.jpg" alt="Orchard Fruits" loading="lazy">
+                    </div>
+                    <h3 class="product-title" data-i18n="product9Name">Orchard Fruits</h3>
+                    <p class="product-short" data-i18n="product9Desc">Mangoes, oranges — traceable & residue-tested</p>
+                    <div class="product-meta">
+                        <span class="product-price" data-i18n="product9Price">₹65/kg</span>
+                        <button class="btn view-details" data-product="p-fruits" data-i18n="productViewDetails">View
+                            Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Buyer Traceability Flow — Upgraded Grid + Modal -->
+        <section id="buyer-traceability" class="section-wrap" data-role="buyer" style="display:none;"
+            aria-labelledby="buyer-traceability-title">
+
+            <div class="section-title">
+                <h2 id="buyer-traceability-title" class="accessible-heading" data-i18n="traceTitle">
+                    Complete Traceability Flow
+                    <i data-lucide="route" style="color:var(--leaf);margin-top:4px"></i>
+                </h2>
+            </div>
+
+            <p class="section-sub accessible-text" data-i18n="traceSub">Track your produce from farm to facility with
+                transparent
+                verification</p>
+
+            <div class="trace-grid">
+
+                <div class="trace-card" data-step="farm">
+                    <div class="t-icon"><i data-lucide="tractor"></i></div>
+                    <h3 data-i18n="traceStep1Title">Farm Origin</h3>
+                    <p data-i18n="traceStep1Desc">Verified farm GPS, soil quality, farmer identity</p>
+                </div>
+
+                <div class="trace-card" data-step="harvest">
+                    <div class="t-icon"><i data-lucide="package"></i></div>
+                    <h3 data-i18n="traceStep2Title">Harvest & Collection</h3>
+                    <p data-i18n="traceStep2Desc">Timestamped harvest logs + moisture & grain checks</p>
+                </div>
+
+                <div class="trace-card" data-step="processing">
+                    <div class="t-icon"><i data-lucide="factory"></i></div>
+                    <h3 data-i18n="traceStep3Title">Processing</h3>
+                    <p data-i18n="traceStep3Desc">FSSAI-certified processing + contaminant checks</p>
+                </div>
+
+                <div class="trace-card" data-step="transport">
+                    <div class="t-icon"><i data-lucide="truck"></i></div>
+                    <h3 data-i18n="traceStep4Title">Distribution</h3>
+                    <p data-i18n="traceStep4Desc">Real-time vehicle tracking + temperature logs</p>
+                </div>
+
+                <div class="trace-card" data-step="delivery">
+                    <div class="t-icon"><i data-lucide="check-circle"></i></div>
+                    <h3 data-i18n="traceStep5Title">Delivery</h3>
+                    <p data-i18n="traceStep5Desc">Final handover with invoice + certification bundle</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TRACEABILITY POPUP MODAL -->
+        <div id="trace-modal" class="tmodal" aria-hidden="true">
+            <div class="tmodal-backdrop"></div>
+
+            <div class="tmodal-card">
+                <button class="tmodal-close">&times;</button>
+
+                <div class="tmodal-content">
+                    <h2 id="tmodal-title"></h2>
+                    <p id="tmodal-desc"></p>
+
+                    <div class="tmodal-evidence">
+                        <!-- images injected here -->
+                    </div>
+
+                    <div class="tmodal-timeline" id="tmodal-timeline">
+                        <!-- timeline injected -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="section-divider">
+
+        <!-- Buyer Procurement -->
+        <section id="buyer-procurement" class="section-wrap" data-role="buyer" style="display: none;"
+            aria-labelledby="buyer-procurement-title">
+            <div class="section-title">
+                <h2 id="buyer-procurement-title" class="accessible-heading" data-i18n="buyerProcurementTitle">
+                    Procurement Portal <i data-lucide="shopping-bag" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="buyerProcurementSub">Place orders, track deliveries, and
+                manage your procurement pipeline</p>
+
+            <div class="grid" style="margin-top:30px">
+                <div class="card">
+                    <i data-lucide="file-text" class="icon-lg"></i>
+                    <h3 data-i18n="buyerProcurement1Title">Order Management</h3>
+                    <p data-i18n="buyerProcurement1Desc">Create and track bulk orders with automated inventory
+                        management.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="calendar" class="icon-lg"></i>
+                    <h3 data-i18n="buyerProcurement2Title">Delivery Scheduling</h3>
+                    <p data-i18n="buyerProcurement2Desc">Schedule deliveries based on your production calendar and
+                        storage capacity.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="file-check" class="icon-lg"></i>
+                    <h3 data-i18n="buyerProcurement3Title">Quality Reports</h3>
+                    <p data-i18n="buyerProcurement3Desc">Access detailed quality reports and certificates for each
+                        batch.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Buyer Certifications -->
+        <section id="buyer-certifications" class="section-wrap" data-role="buyer" style="display: none;"
+            aria-labelledby="buyer-certifications-title">
+            <div class="section-title">
+                <h2 id="buyer-certifications-title" class="accessible-heading" data-i18n="buyerCertificationsTitle">
+                    Quality Certifications <i data-lucide="award" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="buyerCertificationsSub">Verified certifications for all
+                your procured produce</p>
+
+            <div class="grid" style="margin-top:30px">
+                <div class="card">
+                    <i data-lucide="shield-check" class="icon-lg"></i>
+                    <h3 data-i18n="buyerCert1Title">Residue-Free Certification</h3>
+                    <p data-i18n="buyerCert1Desc">Verified zero pesticide residue through lab testing and satellite
+                        monitoring.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="leaf" class="icon-lg"></i>
+                    <h3 data-i18n="buyerCert2Title">Organic Certification</h3>
+                    <p data-i18n="buyerCert2Desc">Certified organic produce meeting international organic standards.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="cloud" class="icon-lg"></i>
+                    <h3 data-i18n="buyerCert3Title">Carbon Credit Verified</h3>
+                    <p data-i18n="buyerCert3Desc">Produce from farms with verified carbon credit generation.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Investor Impact Dashboard -->
+        <section id="investor-dashboard" class="section-wrap" data-role="investor" style="display: none;"
+            aria-labelledby="investor-dashboard-title">
+            <div class="section-title">
+                <h2 id="investor-dashboard-title" class="accessible-heading" data-i18n="investorDashboardTitle">Impact
+                    Dashboard <i data-lucide="trending-up" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="investorDashboardSub">Track environmental and financial
+                impact of your investments</p>
+            <div class="card wide-card show" style="margin-bottom: 30px;">
+                <h3 style="margin-bottom: 15px; color: var(--cloud-navy);">Cumulative Impact Over Time</h3>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="data-series">Select Data Series:</label>
+                        <select id="data-series">
+                            <option value="financial_growth">Financial Growth vs. Investment (Risk/Return)</option>
+                            <option value="environmental_impact" selected>Environmental Impact (ESG Metrics)</option>
+                            <option value="farmer_onboarding">Farmer Profile Distribution (Scalability)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="graph-type-select">Select Graph Type:</label>
+                        <select id="graph-type-select">
+                            <option value="bar">Bar Chart (Comparison)</option>
+                            <option value="line">Line Chart (Trend)</option>
+                            <option value="pie">Pie Chart (Distribution)</option>
+                        </select>
+                    </div>
+
+                    <button id="generate-graph">Analyze Data</button>
+                </div>
+
+                <div class="graph-container">
+                    <canvas id="investorChartCanvas"></canvas>
+                </div>
+            </div>
+            </div>
+
+            <div class="investor-dashboard">
+                <div class="investor-metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">
+                            <i data-lucide="users" style="width:28px;height:28px"></i>
+                        </div>
+                    </div>
+                    <div class="metric-value">12,450</div>
+                    <div class="metric-label" data-i18n="investorMetric1Label">Farmers Impacted</div>
+                    <div class="metric-change" data-i18n="investorMetric1Change">+15% this quarter</div>
+                </div>
+
+                <div class="investor-metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">
+                            <i data-lucide="cloud" style="width:28px;height:28px"></i>
+                        </div>
+                    </div>
+                    <div class="metric-value">8,240</div>
+                    <div class="metric-label" data-i18n="investorMetric2Label">Tonnes CO₂ Sequestered</div>
+                    <div class="metric-change" data-i18n="investorMetric2Change">+22% this quarter</div>
+                </div>
+
+                <div class="investor-metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">
+                            <i data-lucide="dollar-sign" style="width:28px;height:28px"></i>
+                        </div>
+                    </div>
+                    <div class="metric-value">₹6.5Cr</div>
+                    <div class="metric-label" data-i18n="investorMetric3Label">Total Investment</div>
+                    <div class="metric-change" data-i18n="investorMetric3Change">ROI: 18.5%</div>
+                </div>
+
+                <div class="investor-metric-card">
+                    <div class="metric-header">
+                        <div class="metric-icon">
+                            <i data-lucide="map-pin" style="width:28px;height:28px"></i>
+                        </div>
+                    </div>
+                    <div class="metric-value">45,200</div>
+                    <div class="metric-label" data-i18n="investorMetric4Label">Hectares Under Management</div>
+                    <div class="metric-change" data-i18n="investorMetric4Change">+8% expansion</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Investor ROI Metrics -->
+        <section id="investor-metrics" class="section-wrap" data-role="investor" style="display: none;"
+            aria-labelledby="investor-metrics-title">
+            <div class="section-title">
+                <h2 id="investor-metrics-title" class="accessible-heading" data-i18n="investorMetricsTitle">ROI &
+                    Financial Metrics <i data-lucide="bar-chart-3" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="investorMetricsSub">Detailed financial performance and
+                return on investment analytics</p>
+
+            <div class="fpo-dashboard" style="margin-top:30px">
+                <div class="fpo-stat-card">
+                    <i data-lucide="trending-up" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">18.5%</div>
+                    <div class="fpo-stat-label" data-i18n="investorROI1Label">Annual ROI</div>
+                    <div class="fpo-stat-desc" data-i18n="investorROI1Desc">Based on carbon credits</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="wallet" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">₹1.2Cr</div>
+                    <div class="fpo-stat-label" data-i18n="investorROI2Label">Revenue Generated</div>
+                    <div class="fpo-stat-desc" data-i18n="investorROI2Desc">This fiscal year</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="target" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">94%</div>
+                    <div class="fpo-stat-label" data-i18n="investorROI3Label">Target Achievement</div>
+                    <div class="fpo-stat-desc" data-i18n="investorROI3Desc">Carbon credit goals</div>
+                </div>
+
+                <div class="fpo-stat-card">
+                    <i data-lucide="pie-chart" class="fpo-stat-icon"></i>
+                    <div class="fpo-stat-value">₹4.8L</div>
+                    <div class="fpo-stat-label" data-i18n="investorROI4Label">Avg Revenue/Farmer</div>
+                    <div class="fpo-stat-desc" data-i18n="investorROI4Desc">Annual average</div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Investor Portfolio -->
+        <section id="investor-portfolio" class="section-wrap" data-role="investor" style="display: none;"
+            aria-labelledby="investor-portfolio-title">
+            <div class="section-title">
+                <h2 id="investor-portfolio-title" class="accessible-heading" data-i18n="investorPortfolioTitle">
+                    Investment Portfolio <i data-lucide="briefcase" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="investorPortfolioSub">Manage and track your investment
+                portfolio across different regions and crops</p>
+
+            <div class="grid" style="margin-top:30px">
+                <div class="card">
+                    <i data-lucide="map" class="icon-lg"></i>
+                    <h3 data-i18n="investorPortfolio1Title">Geographic Distribution</h3>
+                    <p data-i18n="investorPortfolio1Desc">View investments across different states and regions with
+                        performance metrics.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="sprout" class="icon-lg"></i>
+                    <h3 data-i18n="investorPortfolio2Title">Crop Diversification</h3>
+                    <p data-i18n="investorPortfolio2Desc">Track investments across different crop types and their carbon
+                        potential.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="calendar" class="icon-lg"></i>
+                    <h3 data-i18n="investorPortfolio3Title">Timeline & Milestones</h3>
+                    <p data-i18n="investorPortfolio3Desc">Monitor investment timelines, carbon credit generation
+                        milestones, and payouts.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Investor Opportunities -->
+        <section id="investor-opportunities" class="section-wrap" data-role="investor" style="display: none;"
+            aria-labelledby="investor-opportunities-title">
+            <div class="section-title">
+                <h2 id="investor-opportunities-title" class="accessible-heading" data-i18n="investorOpportunitiesTitle">
+                    Investment Opportunities <i data-lucide="lightbulb" style="color:var(--leaf);margin-top:4px"></i>
+                </h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="investorOpportunitiesSub">Explore new investment
+                opportunities in regenerative agriculture</p>
+
+            <div class="grid" style="margin-top:30px">
+                <div class="card">
+                    <i data-lucide="users" class="icon-lg"></i>
+                    <h3 data-i18n="investorOpp1Title">FPO Partnerships</h3>
+                    <p data-i18n="investorOpp1Desc">Invest in FPOs to scale impact across multiple farmers and regions.
+                    </p>
+                </div>
+                <div class="card">
+                    <i data-lucide="map-pin" class="icon-lg"></i>
+                    <h3 data-i18n="investorOpp2Title">Regional Expansion</h3>
+                    <p data-i18n="investorOpp2Desc">Fund expansion into new regions with high carbon credit potential.
+                    </p>
+                </div>
+                <div class="card">
+                    <i data-lucide="cpu" class="icon-lg"></i>
+                    <h3 data-i18n="investorOpp3Title">Technology Upgrades</h3>
+                    <p data-i18n="investorOpp3Desc">Invest in AI and satellite technology to improve verification and
+                        scaling.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="finance" class="section-wrap" data-role="farmer" aria-labelledby="fin-title">
+            <div class="section-title">
+                <h2 id="fin-title" data-i18n="financeTitle">Financial Inclusivity <i data-lucide="wallet"
+                        style="color:var(--leaf);margin-top:4px"></i> — future roadmap</h2>
+            </div>
+            <p class="section-sub" data-i18n="financeSub">Digital recharge, small loans, digital gold, and insurance are
+                planned farmer-first features.</p>
+
+            <div class="grid" style="margin-top:25px">
+                <div class="card">
+                    <i data-lucide="smartphone" class="icon-lg"></i>
+                    <h3 data-i18n="finance1Title">Digital Payments</h3>
+                    <p data-i18n="finance1Desc">Easy mobile top-up, utility bill payments, and merchant transactions
+                        within the Rupiya Wallet.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="credit-card" class="icon-lg"></i>
+                    <h3 data-i18n="finance2Title">Credit Access</h3>
+                    <p data-i18n="finance2Desc">Collateral-light loans and microfinance options using verified crop data
+                        and farm traceability scores.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="shield-check" class="icon-lg"></i>
+                    <h3 data-i18n="finance3Title">Parametric Insurance</h3>
+                    <p data-i18n="finance3Desc">Customized products for climate risks like excess rain, heat shock, or
+                        specific crop damage events.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Farmer Quick Actions & Notifications -->
+        <section id="farmer-quick-actions" class="section-wrap" data-role="farmer"
+            aria-labelledby="farmer-actions-title">
+            <div class="section-title">
+                <h2 id="farmer-actions-title" class="accessible-heading" data-i18n="farmerActionsTitle">Quick Actions &
+                    Alerts <i data-lucide="zap" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="farmerActionsSub">Stay updated with important
+                notifications and take quick actions</p>
+
+            <div class="grid" style="margin-top:30px">
+                <div class="card" id="weather-alert-card" style="position:relative">
+                    <div style="position:absolute;top:15px;right:15px;background:var(--earth-green);color:white;padding:4px 10px;border-radius:12px;font-size:0.75rem;font-weight:700"
+                        data-i18n="alertNew" id="weather-tag">NEW</div>
+                    <div class="weather-icon-container">
+                        <i data-lucide="sun" class="icon-lg" id="weather-icon-placeholder"></i>
+                    </div>
+                    <h3 data-i18n="farmerAction1Title" id="weather-title">Current Weather</h3>
+                    <p data-i18n="farmerAction1Desc" id="weather-description">Loading real-time weather data...</p>
+                    <button class="btn secondary" style="margin-top:12px;width:100%" data-i18n="viewDetails">View
+                        Details</button>
+                </div>
+                <div class="card">
+                    <i data-lucide="calendar-check" class="icon-lg"></i>
+                    <h3 data-i18n="farmerAction2Title">Upcoming Tasks</h3>
+                    <p data-i18n="farmerAction2Desc">3 tasks due this week. Complete them to maintain compliance score.
+                    </p>
+                    <button class="btn secondary" style="margin-top:12px;width:100%" data-i18n="viewTasks">View
+                        Tasks</button>
+                </div>
+                <div class="card">
+                    <i data-lucide="dollar-sign" class="icon-lg"></i>
+                    <h3 data-i18n="farmerAction3Title">Payment Status</h3>
+                    <p data-i18n="farmerAction3Desc">₹12,000 pending payment. Expected to credit in 5 days.</p>
+                    <button class="btn secondary" style="margin-top:12px;width:100%" data-i18n="checkPayment">Check
+                        Payment</button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- FPO Member Search & Reports -->
+        <section id="fpo-tools" class="section-wrap" data-role="fpo" style="display: none;"
+            aria-labelledby="fpo-tools-title">
+            <div class="section-title">
+                <h2 id="fpo-tools-title" class="accessible-heading" data-i18n="fpoToolsTitle">Member Tools & Reports <i
+                        data-lucide="search" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="fpoToolsSub">Search members, generate reports, and manage
+                FPO operations</p>
+
+            <div style="margin-top:30px">
+                <div class="card" style="padding:25px;margin-bottom:20px">
+                    <div style="display:flex;gap:15px;align-items:center;flex-wrap:wrap">
+                        <div style="flex:1;min-width:250px">
+                            <input type="text" id="memberSearch" placeholder="Search by name, village, or ID..."
+                                style="width:100%;padding:12px 16px;border:2px solid var(--glass-border);border-radius:12px;font-size:1rem"
+                                data-i18n-placeholder="searchMemberPlaceholder">
+                        </div>
+                        <button class="btn" style="padding:12px 24px" data-i18n="searchBtn">Search</button>
+                        <button class="btn secondary" style="padding:12px 24px" data-i18n="exportReport">Export
+                            Report</button>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <i data-lucide="file-text" class="icon-lg"></i>
+                        <h3 data-i18n="fpoTool1Title">Compliance Report</h3>
+                        <p data-i18n="fpoTool1Desc">Generate detailed compliance reports for all members with export
+                            options.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="trending-up" class="icon-lg"></i>
+                        <h3 data-i18n="fpoTool2Title">Performance Analytics</h3>
+                        <p data-i18n="fpoTool2Desc">View group performance metrics, trends, and improvement areas.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="send" class="icon-lg"></i>
+                        <h3 data-i18n="fpoTool3Title">Bulk Notifications</h3>
+                        <p data-i18n="fpoTool3Desc">Send announcements and updates to all members via SMS or app.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Buyer Order Tracking & Filters -->
+        <section id="buyer-tools" class="section-wrap" data-role="buyer" style="display: none;"
+            aria-labelledby="buyer-tools-title">
+            <div class="section-title">
+                <h2 id="buyer-tools-title" class="accessible-heading" data-i18n="buyerToolsTitle">Order Management &
+                    Tracking <i data-lucide="package-search" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="buyerToolsSub">Track orders, filter products, and manage
+                your procurement</p>
+
+            <div style="margin-top:30px">
+                <div class="card" style="padding:25px;margin-bottom:20px">
+                    <div style="display:flex;gap:15px;align-items:center;flex-wrap:wrap">
+                        <select id="orderFilter"
+                            style="flex:1;min-width:200px;padding:12px 16px;border:2px solid var(--glass-border);border-radius:12px;font-size:1rem">
+                            <option value="all" data-i18n="filterAll">All Orders</option>
+                            <option value="pending" data-i18n="filterPending">Pending</option>
+                            <option value="processing" data-i18n="filterProcessing">Processing</option>
+                            <option value="shipped" data-i18n="filterShipped">Shipped</option>
+                            <option value="delivered" data-i18n="filterDelivered">Delivered</option>
+                        </select>
+                        <input type="text" id="orderSearch" placeholder="Search orders..."
+                            style="flex:1;min-width:200px;padding:12px 16px;border:2px solid var(--glass-border);border-radius:12px;font-size:1rem"
+                            data-i18n-placeholder="searchOrderPlaceholder">
+                        <button class="btn" style="padding:12px 24px" data-i18n="filterBtn">Filter</button>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <i data-lucide="map-pin" class="icon-lg"></i>
+                        <h3 data-i18n="buyerTool1Title">Live Tracking</h3>
+                        <p data-i18n="buyerTool1Desc">Real-time tracking of your orders from farm to facility with GPS
+                            updates.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="filter" class="icon-lg"></i>
+                        <h3 data-i18n="buyerTool2Title">Advanced Filters</h3>
+                        <p data-i18n="buyerTool2Desc">Filter by crop type, certification, region, or carbon credit
+                            status.</p>
+                    </div>
+                    <div class="card">
+                        <i data-lucide="download" class="icon-lg"></i>
+                        <h3 data-i18n="buyerTool3Title">Export Data</h3>
+                        <p data-i18n="buyerTool3Desc">Download order history, certificates, and traceability reports.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Investor Analytics & Charts -->
+        <section id="investor-tools" class="section-wrap" data-role="investor" style="display: none;"
+            aria-labelledby="investor-tools-title">
+            <div class="section-title">
+                <h2 id="investor-tools-title" class="accessible-heading" data-i18n="investorToolsTitle">Analytics &
+                    Insights <i data-lucide="bar-chart-4" style="color:var(--leaf);margin-top:4px"></i></h2>
+            </div>
+            <p class="section-sub accessible-text" data-i18n="investorToolsSub">Advanced analytics, charts, and
+                investment insights</p>
+
+            <div style="margin-top:30px">
+                <div class="card" style="padding:25px;margin-bottom:20px">
+                    <div style="display:flex;gap:15px;align-items:center;flex-wrap:wrap">
+                        <select id="chartPeriod"
+                            style="flex:1;min-width:200px;padding:12px 16px;border:2px solid var(--glass-border);border-radius:12px;font-size:1rem">
+                            <option value="week" data-i18n="periodWeek">Last Week</option>
+                            <option value="month" data-i18n="periodMonth">Last Month</option>
+                            <option value="quarter" data-i18n="periodQuarter">Last Quarter</option>
+                            <option value="year" data-i18n="periodYear">Last Year</option>
+                        </select>
+                        <button class="btn primary" style="padding:12px 24px" data-i18n="generateReport"
+                            id="generate-report-btn"> <i data-lucide="play" style="width: 18px;"></i> Generate
+                            Report</button>
+                        <button class="btn secondary" style="padding:12px 24px" data-i18n="exportData">Export
+                            Data</button>
+                    </div>
+                </div>
+
+
+                <div class="grid kpi-summary-grid">
+                    <div class="card kpi-card" id="kpi-financial">
+                        <i data-lucide="trending-up" class="icon-md" style="color: var(--leaf);"></i>
+                        <div class="kpi-content">
+                            <p class="kpi-value" data-value="0.0">₹ -- Lakh</p>
+                            <h4 class="kpi-label">Total Platform Revenue</h4>
+                        </div>
+                    </div>
+                    <div class="card kpi-card" id="kpi-farmers">
+                        <i data-lucide="users" class="icon-md" style="color: var(--cloud-navy);"></i>
+                        <div class="kpi-content">
+                            <p class="kpi-value" data-value="0">0</p>
+                            <h4 class="kpi-label">Total Farmers Onboarded</h4>
+                        </div>
+                    </div>
+
+                    <div class="card kpi-card" id="kpi-impact">
+                        <i data-lucide="leaf" class="icon-md" style="color: var(--accent);"></i>
+                        <div class="kpi-content">
+                            <p class="kpi-value" data-value="0">0 Tonnes</p>
+                            <h4 class="kpi-label">CO₂ Sequestered (Cumulative)</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            </div>
+        </section>
+
+        <section style="text-align:center;margin:30px 0" class="reveal-item">
+            <div class="card" style="display:inline-block;padding:25px 30px;background:var(--bg-light)">
+                <h3 style="margin:0;font-size:1.6rem" data-i18n="onboardTitle">Ready to onboard and earn?</h3>
+                <p style="margin:8px 0 16px;font-size:1.1rem" data-i18n="onboardDesc">Join our pilot program and start
+                    earning revenue from soil health and climate action today.</p>
+                <button class="btn primary-cta" id="join2"></button>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="modal-bg" id="traceModal" aria-hidden="true">
+        <div class="modal">
+            <button class="modal-close-btn" onclick="closeTrace()" aria-label="Close">
+                <i data-lucide="x"></i>
+            </button>
+            <h3 data-i18n="modalTitle">Traceability Demo — Sample Batch Ledger</h3>
+            <p style="margin-top: -10px" data-i18n="modalDesc">Scan the QR (mock) or inspect the JSON below. This ledger
+                links the final produce to the verified carbon credits.</p>
+            <div style="display:flex; gap:30px; align-items:flex-start; margin-top:15px; flex-wrap: wrap;">
+                <div style="flex-shrink:0; text-align:center;">
+                    <img src="https://via.placeholder.com/150x150?text=QR+Code+Mock" alt="Mock QR Code"
+                        style="border-radius:8px; margin-bottom:10px; max-width: 100%;">
+                    <strong data-i18n-prepend="batchIdText">Batch ID: RUP-2025-001</strong>
+                </div>
+                <pre id="traceJson" style="flex: 1; min-width: 250px;"></pre>
+            </div>
+            <button class="btn secondary" style="margin-top:20px; float:right" onclick="closeTrace()"
+                data-i18n="modalClose">Close</button>
+        </div>
+    </div>
+
+    <!-- Log Action Modal -->
+    <div class="modal-bg" id="logActionModal" aria-hidden="true">
+        <div class="modal">
+            <button class="modal-close-btn" onclick="closeLogAction()" aria-label="Close">
+                <i data-lucide="x"></i>
+            </button>
+            <h3 data-i18n="logActionTitle">Log New Action/Input</h3>
+            <p style="margin-top: -10px; color: #666; font-size: 0.9rem;" data-i18n="logActionDesc">Record your farming
+                activity for verification and compliance tracking.</p>
+            <form class="log-action-form" id="logActionForm">
+                <div class="form-group">
+                    <label data-i18n="logActionType">Action Type</label>
+                    <select id="actionType" required>
+                        <option value="">Select action type</option>
+                        <option value="fertilizer" data-i18n="logOptFertilizer">Fertilizer Application</option>
+                        <option value="irrigation" data-i18n="logOptIrrigation">Irrigation</option>
+                        <option value="pesticide" data-i18n="logOptPesticide">Pesticide Application</option>
+                        <option value="harvest" data-i18n="logOptHarvest">Harvest</option>
+                        <option value="other" data-i18n="logOptOther">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="logActionDate">Date</label>
+                    <input type="date" id="actionDate" required>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="logActionField">Field</label>
+                    <select id="actionField" required>
+                        <option value="field1" data-i18n="logOptField1">Field 1</option>
+                        <option value="field2" data-i18n="logOptField2">Field 2</option>
+                        <option value="field3" data-i18n="logOptField3">Field 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-i18n="logActionDetails">Details</label>
+                    <textarea id="actionDetails" placeholder="Enter details about the action..." required></textarea>
+                </div>
+                <div style="display: flex; gap: 12px; margin-top: 10px;">
+                    <button type="submit" class="btn" style="flex: 1;" data-i18n="logActionSubmit">Submit</button>
+                    <button type="button" class="btn secondary" onclick="closeLogAction()" style="flex: 1;"
+                        data-i18n="modalClose">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="traceabilityModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close"
+                style="float: right; font-size: 28px; font-weight: bold; cursor: pointer;">&times;</span>
+            <h2 data-i18n="modalTitle" style="color: var(--cloud-navy);">Batch Ledger: Verified Regenerative
+                Practices</h2>
+            <p>This data is securely logged and immutable, providing full transparency.</p>
+
+            <div id="ledgerBody" class="ledger-body" style="overflow-x: auto;">
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer extended-footer" role="contentinfo" aria-label="Footer">
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+                <div class="logo">Rupiya<span style="color:var(--leaf)">.app</span></div>
+                <p class="muted" data-i18n="footerBrandDesc">
+                    Helping farmers adopt residue-free practices, generate carbon credits and connect to buyers.
+                </p>
+                <div class="socials" aria-label="Social links">
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4 data-i18n="footerProductTitle">Product</h4>
+                <ul>
+                    <li><a href="#buyer-catalog" data-i18n="footerLinkCatalog">Product Catalog</a></li>
+                    <li><a href="#buyer-traceability" data-i18n="footerLinkTraceability">Traceability</a></li>
+                    <li><a href="#carbon" data-i18n="footerLinkCarbon">Carbon Credits</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4 data-i18n="footerCompanyTitle">Company</h4>
+                <ul>
+                    <li><a href="#about" data-i18n="footerLinkAbout">About Us</a></li>
+                    <li><a href="#careers" data-i18n="footerLinkCareers">Careers</a></li>
+
+                    <li>
+                        <a href="mailto:support@rupiya.app" data-i18n="footerLinkEmail">Email Us</a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
+                    </li>
+                    <li>
+                        <a href="tel:+91XXXXXXXXXX" data-i18n="footerLinkCall">Call Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 data-i18n="footerNewsletterTitle">Get updates</h4>
+                <p class="muted" data-i18n="footerNewsletterDesc">Join our newsletter for farmer stories & market
+                    updates.</p>
+                <form id="newsletter-form" class="newsletter-form" action="#" method="post"
+                    onsubmit="event.preventDefault(); alert('Subscribed (demo)');">
+                    <input type="email" name="email" required placeholder="Your email"
+                        data-i18n-placeholder="footerEmailPlaceholder" aria-label="Your email">
+                    <button class="btn" type="submit" data-i18n="footerSubscribe">Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p class="muted">© <span id="footer-year-2"></span> Rupiya.app — <span data-i18n="footerAllRights">All
+                    rights reserved.</span></p>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Back to top" title="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
